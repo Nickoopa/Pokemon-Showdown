@@ -674,9 +674,9 @@ var commands = exports.commands = {
 	 		}
 	 		output = '';
 	 		if (badges.indexOf('electric') >= 0) output = output + '<img title="Electric" src="placeholder"/>';
-	 		if (badges.indexOf('normal') >= 0) output = output + '<img title="Normal" src="placeholder"/>';
+	 		if (badges.indexOf('normal') >= 0) output = output + '<img title="Normal" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsf2934626.png"/>';
 	 		if (badges.indexOf('rock') >= 0) output = output + '<img title="Rock" src="placeholder"/>';
-	 		if (badges.indexOf('fire') >= 0) output = output + '<img title="Fire" src="placeholder"/>';
+	 		if (badges.indexOf('fire') >= 0) output = output + '<img title="Fire" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/508Hihidaruma_zps56c147ec.png"/>';
 	 		if (badges.indexOf('steel') >= 0) output = output + '<img title="Steel" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/131_zpsc82e5e53.png~320x480"/>';
 	 		if (badges.indexOf('grass') >= 0) output = output + '<img title="Grass" src="placeholder"/>';
 	 		if (badges.indexOf('bug') >= 0) output = output + '<img title="Bug" src="placeholder"/>';
