@@ -684,7 +684,7 @@ var commands = exports.commands = {
 	 		if (badges.indexOf('fairy') >= 0) output = output + '<img title="Fairy" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/033_zps778a8f48.png"/>';
 	 		if (badges.indexOf('water') >= 0) output = output + '<img title="Water" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/083_zps6aa5effc.png~320x480"/>';
 	 		if (badges.indexOf('ghost') >= 0) output = output + '<img title="Ghost" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps992c377f.png"/>';
-	 		if (badges.indexOf('flying') >= 0) output = output + '<img title="Flying" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/K145_zps3a3d8044.png~320x480p"/>';
+	 		if (badges.indexOf('flying') >= 0) output = output + '<img title="Flying" src="http://i.picresize.com/images/2014/03/16/7gG9.png"/>';
 	 		if (badges.indexOf('ground') >= 0) output = output + '<img title="Ground" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/003_zps7b109aa5.png~320x480"/>';
 	 		if (badges.indexOf('fighting') >= 0) output = output + '<img title="Fighting" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/146_zps098d23fa.png~320x480"/>';
 	 		if (badges.indexOf('poison') >= 0) output = output + '<img title="Poison" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/018_zps7add8bf3.png"/>';
