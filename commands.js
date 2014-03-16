@@ -646,6 +646,56 @@ var commands = exports.commands = {
 		});
 	 },
 
+	 removebadge: 'takebadge',
+	 takebadge: function(target, room, user) {
+	 	if (!user.can('warn')) return false;
+	 	if (!target) return this.sendReply('Usage: /takebadge [username], [type]');
+	 	targetSplit = target.split(',');
+	 	if (!targetSplit[0] || !targetSplit[1]) return this.sendReply('Usage: /takebadge [username], [type]');
+	 	targetUser = Users.get(targetSplit[0]);
+	 	type = targetSplit[1];
+	 	type = type.trim();
+	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water';
+	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type!'); 
+	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
+	 	self = this;
+		fs.readFile('config/badges.txt','utf8',function(err, data) {
+			if (err) data = '';
+			match = false;
+			badges = '';
+			var row = (''+data).split("\n");
+			var line = '';
+			count = 0;
+			for (var i = row.length; i > -1; i--) {
+				if (!row[i]) continue;
+				var parts = row[i].split(",");
+				if (targetUser.userid == parts[0]) {
+					match = true;
+					line = line + row[i];
+					for (var x in parts) {
+						count++;
+						if (parts[x] != targetUser.userid) {
+							if (count != parts.length) badges = badges + parts[x] + ',';
+							if (count == parts.length) badges = badges + parts[x];
+						}
+					}
+					break;
+				}
+			}
+			if (badges.indexOf(type.toLowerCase()) < 0) return self.sendReply(targetUser.name+' doesn\'t have a '+type+' badge.');
+			if (match === true) {
+				var re = new RegExp(line,"g");
+				var re2 = new RegExp(type.toLowerCase()+',');
+				badges = badges.replace(re2, "");
+				var result = data.replace(re, targetUser.userid+','+badges);
+				fs.writeFile('config/badges.txt', result, 'utf8', function (err) {
+					if (err) return console.log(err);
+					self.sendReply(targetUser.name+' has lost their '+type+' badge.');
+				});
+			} 
+		});
+	 },
+
 	 showbadges: 'viewbadges',
 	 showbadge: 'viewbadges',
 	 viewbadge: 'viewbadges',
