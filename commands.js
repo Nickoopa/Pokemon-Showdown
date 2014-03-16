@@ -595,6 +595,105 @@ var commands = exports.commands = {
 	/*********************************************************
 	 * Other assorted Amethyst commands
 	 *********************************************************/
+
+	 givebadge: function(target, room, user) {
+	 	if (!user.can('warn')) return false;
+	 	if (!target) return this.sendReply('Usage: /givebadge [username], [type]');
+	 	targetSplit = target.split(',');
+	 	if (!targetSplit[0] || !targetSplit[1]) return this.sendReply('Usage: /givebadge [username], [type]');
+	 	targetUser = Users.get(targetSplit[0]);
+	 	type = targetSplit[1];
+	 	type = type.trim();
+	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water';
+	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type!'); 
+	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
+	 	self = this;
+		fs.readFile('config/badges.txt','utf8',function(err, data) {
+			if (err) data = '';
+			match = false;
+			badges = '';
+			var row = (''+data).split("\n");
+			var line = '';
+			count = 0;
+			for (var i = row.length; i > -1; i--) {
+				if (!row[i]) continue;
+				var parts = row[i].split(",");
+				if (targetUser.userid == parts[0]) {
+					match = true;
+					line = line + row[i];
+					for (var x in parts) {
+						count++;
+						if (parts[x] != targetUser.userid) {
+							if (count != parts.length) badges = badges + parts[x] + ',';
+							if (count == parts.length) badges = badges + parts[x];
+						}
+					}
+					break;
+				}
+			}
+			if (badges.indexOf(type.toLowerCase()) >= 0) return self.sendReplyBox(targetUser.name+' already has a badge for that type!');
+			if (match === true) {
+				var re = new RegExp(line,"g");
+				var result = data.replace(re, targetUser.userid+','+type.toLowerCase()+','+badges);
+				fs.writeFile('config/badges.txt', result, 'utf8', function (err) {
+					if (err) return console.log(err);
+					self.sendReply(targetUser.name+' has received the '+type+' badge.');
+				});
+			} else {
+				fs.appendFile('config/badges.txt','\n'+targetUser.userid+','+type.toLowerCase()+','+badges);
+				self.sendReply(targetUser.name+' has received the '+type+' badge.');
+			}
+		});
+	 },
+
+	 showbadges: 'viewbadges',
+	 showbadge: 'viewbadges',
+	 viewbadge: 'viewbadges',
+	 viewbadges: function(target, room, user) { 
+	 	if (!this.canBroadcast()) return;
+	 	if (!target) { 
+	 		userid = user.userid;
+	 		username = user.name;
+	 	} else {
+	 		userid = toId(target);
+	 		username = target;
+	 	}
+	 	self = this;
+	 	fs.readFile('config/badges.txt','utf8',function(err, data) {
+	 		if (err) return self.sendReplyBox(username+' has no badges.');
+	 		line = data.split('\n');
+	 		badges = '';
+	 		for (var u in line) {
+	 			row = line[u].split(',');
+	 			if (row[0] != userid) continue;
+	 			for (var x in row) {
+	 				if (row[x] != userid) {
+	 					badges = badges + row[x] + ',';
+	 				}
+	 			}
+	 		}
+	 		output = '';
+	 		if (badges.indexOf('electric') >= 0) output = output + '<img title="Electric" src="placeholder"/>';
+	 		if (badges.indexOf('normal') >= 0) output = output + '<img title="Normal" src="placeholder"/>';
+	 		if (badges.indexOf('rock') >= 0) output = output + '<img title="Rock" src="placeholder"/>';
+	 		if (badges.indexOf('fire') >= 0) output = output + '<img title="Fire" src="placeholder"/>';
+	 		if (badges.indexOf('steel') >= 0) output = output + '<img title="Steel" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/131_zpsc82e5e53.png~320x480"/>';
+	 		if (badges.indexOf('grass') >= 0) output = output + '<img title="Grass" src="placeholder"/>';
+	 		if (badges.indexOf('bug') >= 0) output = output + '<img title="Bug" src="placeholder"/>';
+	 		if (badges.indexOf('psychic') >= 0) output = output + '<img title="Psychic" src="placeholder"/>';
+	 		if (badges.indexOf('fairy') >= 0) output = output + '<img title="Fairy" src="placeholder"/>';
+	 		if (badges.indexOf('water') >= 0) output = output + '<img title="Water" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/083_zps6aa5effc.png~320x480"/>';
+	 		if (badges.indexOf('ghost') >= 0) output = output + '<img title="Ghost" src="placeholder"/>';
+	 		if (badges.indexOf('flying') >= 0) output = output + '<img title="Flying" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/K145_zps3a3d8044.png~320x480p"/>';
+	 		if (badges.indexOf('ground') >= 0) output = output + '<img title="Ground" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/003_zps7b109aa5.png~320x480"/>';
+	 		if (badges.indexOf('fighting') >= 0) output = output + '<img title="Fighting" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/146_zps098d23fa.png~320x480"/>';
+	 		if (badges.indexOf('poison') >= 0) output = output + '<img title="Poison" src="placeholder"/>';
+	 		if (output == '') return self.sendReplyBox(username+' has no badges.');
+	 		self.sendReplyBox('<center>'+username+' has the following badges:<br />'+output+'</center>');
+	 		room.update();
+	 	});
+	 },
+
 	picktier: 'tierpick',
 	tierpick: function(target, room, user){
 		return this.parse('/poll Vote for the next Tournament Tier,randombattle,ou,ubers,uu,ru,nu,lc,cap,cc1v1,oumonotype,alphabetcup,uumono,1v1,smogondoubles,vgcdoubles');
