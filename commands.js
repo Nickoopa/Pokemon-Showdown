@@ -649,6 +649,7 @@ var commands = exports.commands = {
 	 showbadges: 'viewbadges',
 	 showbadge: 'viewbadges',
 	 viewbadge: 'viewbadges',
+	 vb: 'viewbadges',
 	 viewbadges: function(target, room, user) { 
 	 	if (!this.canBroadcast()) return;
 	 	if (!target) { 
