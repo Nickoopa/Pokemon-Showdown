@@ -280,6 +280,7 @@ var commands = exports.commands = {
 					data = username+' is not registered.';
 				}
 				self.sendReplyBox(data);
+				room.update();
 			});
 		});
 		req.end();
