@@ -675,7 +675,7 @@ var commands = exports.commands = {
 	 		output = '';
 	 		if (badges.indexOf('electric') >= 0) output = output + '<img title="Electric" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/019_zps1c48a4cf.png"/>';
 	 		if (badges.indexOf('normal') >= 0) output = output + '<img title="Normal" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsf2934626.png"/>';
-	 		if (badges.indexOf('rock') >= 0) output = output + '<img title="Rock" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/146_zps098d23fa.png"/>';
+	 		if (badges.indexOf('rock') >= 0) output = output + '<img title="Rock" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/097_zpsad64274a.png"/>';
 	 		if (badges.indexOf('fire') >= 0) output = output + '<img title="Fire" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/062_zpsa4a9ad16.png"/>';
 	 		if (badges.indexOf('steel') >= 0) output = output + '<img title="Steel" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/131_zpsc82e5e53.png~320x480"/>';
 	 		if (badges.indexOf('grass') >= 0) output = output + '<img title="Grass" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/002_zpsf02c0411.png"/>';
