@@ -980,7 +980,7 @@ kozman: 'koz',
 	league: 'leagueintro',
 	leagueintro: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Welcome to the Amethyst League! To challenge the OU Champion, you must win 8 badges and beat the Elite 4. <br>View the list of OU Gym Leaders using /ougl. ood luck!');
+		this.sendReplyBox('Welcome to the Amethyst League! To challenge the OU Champion, you must win 8 badges and beat the Elite 4. <br>View the list of OU Gym Leaders using /ougl. Good luck!');
 	},
 
 	ougymleaders: 'ouleaders',
