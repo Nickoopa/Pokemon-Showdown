@@ -712,7 +712,11 @@ var commands = exports.commands = {
 	 	}
 	 	self = this;
 	 	fs.readFile('config/badges.txt','utf8',function(err, data) {
-	 		if (err) return self.sendReplyBox(username+' has no badges.');
+	 		if (err) { 
+	 			self.sendReplyBox(username+' has no badges.');
+	 			room.update();
+	 			return true;
+	 		}
 	 		line = data.split('\n');
 	 		badges = '';
 	 		for (var u in line) {
