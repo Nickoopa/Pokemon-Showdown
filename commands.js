@@ -739,7 +739,7 @@ var commands = exports.commands = {
 	 		if (badges.indexOf('bug') >= 0) glbadge = glbadge + '<img title="Bug" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/061_zps01c1d2a3.png"/>';
 	 		if (badges.indexOf('psychic') >= 0) glbadge = glbadge + '<img title="Psychic" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsc55ac97a.png"/>';
 	 		if (badges.indexOf('fairy') >= 0) glbadge = glbadge + '<img title="Fairy" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/033_zps778a8f48.png"/>';
-	 		if (badges.indexOf('water') >= 0) glbadge = glbadge + '<img title="Water" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/083_zps6aa5effc.png~320x480"/>';
+	 		if (badges.indexOf('water') >= 0) glbadge = glbadge + '<img title="Water" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps41b18534.png"/>';
 	 		if (badges.indexOf('ghost') >= 0) glbadge = glbadge + '<img title="Ghost" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps992c377f.png"/>';
 	 		if (badges.indexOf('flying') >= 0) glbadge = glbadge + '<img title="Flying" src="http://i.picresize.com/images/2014/03/16/7gG9.png"/>';
 	 		if (badges.indexOf('ground') >= 0) glbadge = glbadge + '<img title="Ground" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/003_zps7b109aa5.png~320x480"/>';
