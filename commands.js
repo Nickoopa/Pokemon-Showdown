@@ -696,6 +696,7 @@ var commands = exports.commands = {
 		});
 	 },
 
+	 badges: 'viewbadges',
 	 showbadges: 'viewbadges',
 	 showbadge: 'viewbadges',
 	 viewbadge: 'viewbadges',
