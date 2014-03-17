@@ -604,8 +604,8 @@ var commands = exports.commands = {
 	 	targetUser = Users.get(targetSplit[0]);
 	 	type = targetSplit[1];
 	 	type = type.trim();
-	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water';
-	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type!'); 
+	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,boss';
+	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.'); 
 	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
 	 	self = this;
 		fs.readFile('config/badges.txt','utf8',function(err, data) {
@@ -655,8 +655,8 @@ var commands = exports.commands = {
 	 	targetUser = Users.get(targetSplit[0]);
 	 	type = targetSplit[1];
 	 	type = type.trim();
-	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water';
-	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type!'); 
+	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,boss';
+	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.'); 
 	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
 	 	self = this;
 		fs.readFile('config/badges.txt','utf8',function(err, data) {
@@ -723,24 +723,29 @@ var commands = exports.commands = {
 	 				}
 	 			}
 	 		}
-	 		output = '';
-	 		if (badges.indexOf('electric') >= 0) output = output + '<img title="Electric" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/019_zps1c48a4cf.png"/>';
-	 		if (badges.indexOf('normal') >= 0) output = output + '<img title="Normal" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsf2934626.png"/>';
-	 		if (badges.indexOf('rock') >= 0) output = output + '<img title="Rock" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/097_zpsad64274a.png"/>';
-	 		if (badges.indexOf('fire') >= 0) output = output + '<img title="Fire" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/062_zpsa4a9ad16.png"/>';
-	 		if (badges.indexOf('steel') >= 0) output = output + '<img title="Steel" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/131_zpsc82e5e53.png~320x480"/>';
-	 		if (badges.indexOf('grass') >= 0) output = output + '<img title="Grass" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/002_zpsf02c0411.png"/>';
-	 		if (badges.indexOf('bug') >= 0) output = output + '<img title="Bug" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/061_zps01c1d2a3.png"/>';
-	 		if (badges.indexOf('psychic') >= 0) output = output + '<img title="Psychic" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsc55ac97a.png"/>';
-	 		if (badges.indexOf('fairy') >= 0) output = output + '<img title="Fairy" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/033_zps778a8f48.png"/>';
-	 		if (badges.indexOf('water') >= 0) output = output + '<img title="Water" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/083_zps6aa5effc.png~320x480"/>';
-	 		if (badges.indexOf('ghost') >= 0) output = output + '<img title="Ghost" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps992c377f.png"/>';
-	 		if (badges.indexOf('flying') >= 0) output = output + '<img title="Flying" src="http://i.picresize.com/images/2014/03/16/7gG9.png"/>';
-	 		if (badges.indexOf('ground') >= 0) output = output + '<img title="Ground" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/003_zps7b109aa5.png~320x480"/>';
-	 		if (badges.indexOf('fighting') >= 0) output = output + '<img title="Fighting" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/146_zps098d23fa.png~320x480"/>';
-	 		if (badges.indexOf('poison') >= 0) output = output + '<img title="Poison" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/018_zps7add8bf3.png"/>';
-	 		if (output == '') return self.sendReplyBox(username+' has no badges.');
-	 		self.sendReplyBox('<center>'+username+' has the following badges:<br />'+output+'</center>');
+	 		glbadge = '';
+	 		e4badge = '';
+	 		if (badges.indexOf('electric') >= 0) glbadge = glbadge + '<img title="Electric" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/019_zps1c48a4cf.png"/>';
+	 		if (badges.indexOf('normal') >= 0) glbadge = glbadge + '<img title="Normal" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsf2934626.png"/>';
+	 		if (badges.indexOf('rock') >= 0) glbadge = glbadge + '<img title="Rock" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/097_zpsad64274a.png"/>';
+	 		if (badges.indexOf('fire') >= 0) glbadge = glbadge + '<img title="Fire" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/062_zpsa4a9ad16.png"/>';
+	 		if (badges.indexOf('steel') >= 0) glbadge = glbadge + '<img title="Steel" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/131_zpsc82e5e53.png~320x480"/>';
+	 		if (badges.indexOf('grass') >= 0) glbadge = glbadge + '<img title="Grass" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/002_zpsf02c0411.png"/>';
+	 		if (badges.indexOf('bug') >= 0) glbadge = glbadge + '<img title="Bug" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/061_zps01c1d2a3.png"/>';
+	 		if (badges.indexOf('psychic') >= 0) glbadge = glbadge + '<img title="Psychic" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsc55ac97a.png"/>';
+	 		if (badges.indexOf('fairy') >= 0) glbadge = glbadge + '<img title="Fairy" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/033_zps778a8f48.png"/>';
+	 		if (badges.indexOf('water') >= 0) glbadge = glbadge + '<img title="Water" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/083_zps6aa5effc.png~320x480"/>';
+	 		if (badges.indexOf('ghost') >= 0) glbadge = glbadge + '<img title="Ghost" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps992c377f.png"/>';
+	 		if (badges.indexOf('flying') >= 0) glbadge = glbadge + '<img title="Flying" src="http://i.picresize.com/images/2014/03/16/7gG9.png"/>';
+	 		if (badges.indexOf('ground') >= 0) glbadge = glbadge + '<img title="Ground" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/003_zps7b109aa5.png~320x480"/>';
+	 		if (badges.indexOf('fighting') >= 0) glbadge = glbadge + '<img title="Fighting" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/146_zps098d23fa.png~320x480"/>';
+	 		if (badges.indexOf('poison') >= 0) glbadge = glbadge + '<img title="Poison" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/018_zps7add8bf3.png"/>';
+	 		if (badges.indexOf('kozman') >= 0) e4badge = e4badge + '<img title="Elite Four Kozman (Fighting)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/145_zps5de2fc9e.png"/>';
+	 		if (badges.indexOf('solor') >= 0) e4badge = e4badge + '<img title="Elite Four Solor (Flying)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/148_zpsc03fd480.png"/>';
+	 		if (badges.indexOf('zukushiku') >= 0) e4badge = e4badge + '<img title="Elite Four Zukushiku (Dark)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/078_zpsda18a62b.png"/>';
+	 		if (badges.indexOf('boss') >= 0) e4badge = e4badge + '<img title="Elite Four Boss (Water)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/010_zps1d22376a.png"/>';
+	 		if (glbadge == '' && e4badge == '') return self.sendReplyBox(username+' has no badges.');
+	 		self.sendReplyBox('<center>'+username+'\'s badges <br /><br />Gym Leader Badges:<br />'+glbadge+'<br />Elite Four Badges: <br />'+e4badge+'</center>');
 	 		room.update();
 	 	});
 	 },
