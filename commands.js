@@ -597,7 +597,7 @@ var commands = exports.commands = {
 	 *********************************************************/
 
 	 givebadge: function(target, room, user) {
-	 	if (!user.can('warn')) return false;
+	 	if (!user.can('warn') && user.userid != 'BadSteel','Elite Four Mrlon','Apex KroNiN','miloticnob','saira','Gym Leder Sam','Elit Four Solor') return false;
 	 	if (!target) return this.sendReply('Usage: /givebadge [username], [type]');
 	 	targetSplit = target.split(',');
 	 	if (!targetSplit[0] || !targetSplit[1]) return this.sendReply('Usage: /givebadge [username], [type]');
