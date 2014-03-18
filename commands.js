@@ -748,7 +748,7 @@ var commands = exports.commands = {
 	 		if (badges.indexOf('kozman') >= 0) e4badge = e4badge + '<img title="Elite Four Kozman (Fighting)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/145_zps5de2fc9e.png"/>';
 	 		if (badges.indexOf('solor') >= 0) e4badge = e4badge + '<img title="Elite Four Solor (Flying)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/148_zpsc03fd480.png"/>';
 	 		if (badges.indexOf('zukushiku') >= 0) e4badge = e4badge + '<img title="Elite Four Zukushiku (Dark)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/078_zpsda18a62b.png"/>';
-	 		if (badges.indexOf('boss') >= 0) e4badge = e4badge + '<img title="Elite Four Boss (Water)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/010_zps1d22376a.png"/>';
+	 		if (badges.indexOf('marlon') >= 0) e4badge = e4badge + '<img title="Elite Four Marlon (Water)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps41b18534.png"/>';
 	 		if (glbadge == '' && e4badge == '') return self.sendReplyBox(username+' has no badges.');
 	 		self.sendReplyBox('<center>'+username+'\'s badges <br /><br />Gym Leader Badges:<br />'+glbadge+'<br />Elite Four Badges: <br />'+e4badge+'</center>');
 	 		room.update();
