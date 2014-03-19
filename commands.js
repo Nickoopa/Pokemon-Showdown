@@ -604,7 +604,7 @@ var commands = exports.commands = {
 	 	targetUser = Users.get(targetSplit[0]);
 	 	type = targetSplit[1];
 	 	type = type.trim();
-	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,boss';
+	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,marlon';
 	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.'); 
 	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
 	 	self = this;
@@ -655,7 +655,7 @@ var commands = exports.commands = {
 	 	targetUser = Users.get(targetSplit[0]);
 	 	type = targetSplit[1];
 	 	type = type.trim();
-	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,boss';
+	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,marlon';
 	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.'); 
 	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
 	 	self = this;
