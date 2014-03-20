@@ -597,7 +597,7 @@ var commands = exports.commands = {
 	 *********************************************************/
 
 	 givebadge: function(target, room, user) {
-	 	if (!user.can('warn') && user.userid != 'badsteel' && user.userid != 'elitefourmrlon' && user.userid != 'apexkronin' && user.userid != 'miloticnob' && user.userid != 'saira' && user.userid != 'gmledrsam') return false;
+	 	if (!user.can('warn') && user.userid != 'badsteel' && user.userid != 'elitefourmrlon' && user.userid != 'apexkronin' && user.userid != 'miloticnob' && user.userid != 'saira' && user.userid != 'gmledrsam' && user.userid != 'gymlederpalp' && user.userid != 'gymlederewok' && user.userid != 'gymledermonophy') return false;
 	 	if (!target) return this.sendReply('Usage: /givebadge [username], [type]');
 	 	targetSplit = target.split(',');
 	 	if (!targetSplit[0] || !targetSplit[1]) return this.sendReply('Usage: /givebadge [username], [type]');
