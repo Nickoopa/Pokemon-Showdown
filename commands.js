@@ -730,6 +730,8 @@ var commands = exports.commands = {
 	 		}
 	 		glbadge = '';
 	 		e4badge = '';
+	 		if (badges.indexOf('dark') >= 0) glbadge = glbadge + '<img title="Dark" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/137_zps42ddfd4a.png"/>';
+	 		if (badges.indexOf('dragon') >= 0) glbadge = glbadge + '<img title="Dragon" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/142_zpsea0762e7.png"/>';
 	 		if (badges.indexOf('electric') >= 0) glbadge = glbadge + '<img title="Electric" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/019_zps1c48a4cf.png"/>';
 	 		if (badges.indexOf('normal') >= 0) glbadge = glbadge + '<img title="Normal" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsf2934626.png"/>';
 	 		if (badges.indexOf('rock') >= 0) glbadge = glbadge + '<img title="Rock" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/097_zpsad64274a.png"/>';
