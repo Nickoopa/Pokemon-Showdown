@@ -648,7 +648,7 @@ var commands = exports.commands = {
 
 	 removebadge: 'takebadge',
 	 takebadge: function(target, room, user) {
-	 	if (!user.can('warn')) return false;
+	 	if (!user.can('warn') && user.userid != 'badsteel' && user.userid != 'elitefourmrlon' && user.userid != 'apexkronin' && user.userid != 'miloticnob' && user.userid != 'saira' && user.userid != 'gmledrsam' && user.userid != 'gymlederpalp' && user.userid != 'gymlederewok' && user.userid != 'gymledermonophy' && user.userid != 'gymlederchikin') return false;
 	 	if (!target) return this.sendReply('Usage: /takebadge [username], [type]');
 	 	targetSplit = target.split(',');
 	 	if (!targetSplit[0] || !targetSplit[1]) return this.sendReply('Usage: /takebadge [username], [type]');
