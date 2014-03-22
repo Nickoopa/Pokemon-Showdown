@@ -1160,6 +1160,7 @@ kozman: 'koz',
 			'<b><font color=#f62463>Psychic:</b> </font>saira<br />' +
 			'<b><font color=#e079e0>Fairy:</b> </font>Monophy<br />' +
 			'<b><font color=#4475ec>Water:</b> </font>Aikenka<br />' +
+			'<b><font color=#5a477b>Ghost:</b> </font>PlatinumCheesecake<br />' +
 			'<b><font color=#9683cd>Flying:</b> </font>Vanitas<br />' +
 			'<b><font color=#d6ac37>Ground:</b> </font>The TurtleLord<br />' +
 			'<b><font color=#a72a23>Fighting:</b> </font>Dark Girafarig<br />' +
