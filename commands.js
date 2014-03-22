@@ -1154,7 +1154,7 @@ kozman: 'koz',
 			'<b><font color=#909060>Normal:</b> </font>miloticnob</font><br />' +
 			'<b><font color=#9d8930>Rock:</b> </font>Neon Lights</font><br />' +
 			'<b><font color=#e16c17>Fire:</b> </font>Ewok</font><br />' +
-			'<b><font color=#a3a3c2>Steel:</b> </font>Bayspot</font><br />' +
+			'<b><font color=#a3a3c2>Steel:</b> </font>BadSteel</font><br />' +
 			'<b><font color=#5eab37>Grass:</b> </font>Gym Leader Sam<br />' +
 			'<b><font color=#95a31d>Bug:</b> </font>hostageclam<br />' +
 			'<b><font color=#f62463>Psychic:</b> </font>saira<br />' +
