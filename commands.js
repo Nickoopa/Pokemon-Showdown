@@ -1166,8 +1166,17 @@ kozman: 'koz',
 			'<b><font color=#a72a23>Fighting:</b> </font>Dark Girafarig<br />' +
 			'<b><font color=#843484>Poison:</b> </font>CoolAsian<br />' +
 			'<b><font color=#5210f0>Dragon:</b> </font>Chikin Nuggetz<br />' +
-			'<b><font color=#594539>Dark:</b> </font>Palpitoad707<br />' +
-			'');
+			'<b><font color=#594539>Dark:</b> </font>Palpitoad707<br />');
+	},
+
+	ouelitefour: 'oue4',
+	oue4: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<b>OU Elite Four:</b> <br />' +
+			'<b><font color=#a3a3c2>Steel:</b> </font>Ross<br />' +
+			'<b><font color=#9683cd>Flying:</b> </font>Solor<br />' +
+			'<b><font color=#4475ec>Water:</b> </font>Marlon<br />' +
+			'<b><font color=#a72a23>Fighting:</b> </font>Kozman<br />');
 	},
 
 	uugymleaders: 'uuleaders',
