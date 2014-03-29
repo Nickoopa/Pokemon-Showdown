@@ -1402,9 +1402,10 @@ var ChatRoom = (function() {
 /*<<<<<<< HEAD
 		if (global.Tournaments && Tournaments.getTournament(this.id))
 			Tournaments.getTournament(this.id).update(user);
+
+=======*/
 		if (this.reminders && this.reminders.length > 0)
 			CommandParser.parse('/reminder', this, user, connection);
-=======*/
 		if (global.Tournaments && Tournaments.get(this.id))
 			Tournaments.get(this.id).update(user);
 	};
@@ -1432,8 +1433,9 @@ var ChatRoom = (function() {
 			this.send('|init|chat\n|title|'+this.title+'\n'+userList+'\n'+this.logGetLast(100).join('\n')+modchat, connection);
 			/*if (global.Tournaments && Tournaments.getTournament(this.id))
 				Tournaments.getTournament(this.id).update(user);
+			*/
 			if (this.reminders && this.reminders.length > 0)
-				CommandParser.parse('/reminder', this, user, connection);*/
+				CommandParser.parse('/reminder', this, user, connection);
 		}
 		if (global.Tournaments && Tournaments.get(this.id))
 			Tournaments.get(this.id).update(user);
