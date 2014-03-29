@@ -1,0 +1,49 @@
+﻿Merge remote-tracking branch 'upstream/master'
+
+Conflicts:
+	commands.js
+	config/commands.js
+	config/formats.js
+	mods/gennext/README.md
+	mods/gennext/items.js
+	mods/gennext/moves.js
+	rooms.js
+	sockets.js
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	modified:   app.js
+#	modified:   battle-engine.js
+#	modified:   commands.js
+#	modified:   config/commands.js
+#	modified:   config/formats.js
+#	modified:   data/aliases.js
+#	modified:   data/formats-data.js
+#	modified:   data/learnsets.js
+#	modified:   data/moves.js
+#	modified:   data/rulesets.js
+#	modified:   data/scripts.js
+#	modified:   package.json
+#	modified:   rooms.js
+#	modified:   simulator.js
+#	modified:   sockets.js
+#	modified:   tools.js
+#	new file:   tournaments/frontend.js
+#	new file:   tournaments/generator-elimination.js
+#	new file:   tournaments/generator-round-robin.js
+#	new file:   tournaments/lib/closure-goog.structs.TreeNode-c8e0b2dcd892.min.js
+#	modified:   users.js
+#
+

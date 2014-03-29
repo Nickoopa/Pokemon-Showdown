@@ -368,6 +368,8 @@ global.CommandParser = require('./command-parser.js');
 
 global.Simulator = require('./simulator.js');
 
+global.Tournaments = require('./tournaments/frontend.js');
+
 try {
 	global.Dnsbl = require('./dnsbl.js');
 } catch (e) {
@@ -433,5 +435,5 @@ fs.readFile('./config/ipbans.txt', function (err, data) {
 	Users.checkRangeBanned = Cidr.checker(rangebans);
 });
 
-global.tour = require('./tour.js').tour(); 
+//global.tour = require('./tour.js').tour(); 
 global.hangman = require('./hangman.js').hangman();
