@@ -790,7 +790,12 @@ var commands = exports.commands = {
 		return this.privateModCommand('|html|(' + user.name + ' has made <font color="red">' +this.targetUsername+ '</font>\'s prior links unclickable.)');
 	},
 
-kozman: 'koz',
+	mpea: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><img src="http://frostserver.net:8000/images/hellompea.jpg"></center>');
+	},
+
+	kozman: 'koz',
         koz: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#09B38E"><b>Kozman</b></font><br />' +
