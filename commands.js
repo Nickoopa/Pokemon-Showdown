@@ -736,7 +736,7 @@ var commands = exports.commands = {
 	 		if (badges.indexOf('normal') >= 0) glbadge = glbadge + '<img title="Normal" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsf2934626.png"/>';
 	 		if (badges.indexOf('rock') >= 0) glbadge = glbadge + '<img title="Rock" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/097_zpsad64274a.png"/>';
 	 		if (badges.indexOf('fire') >= 0) glbadge = glbadge + '<img title="Fire" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/062_zpsa4a9ad16.png"/>';
-	 		if (badges.indexOf('steel') >= 0) glbadge = glbadge + '<img title="Steel" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/131_zpsc82e5e53.png"/>';
+	 		if (badges.indexOf('steel') >= 0) glbadge = glbadge + '<img title="Steel" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/131_zpsc82e5e53.png"/>';
 	 		if (badges.indexOf('grass') >= 0) glbadge = glbadge + '<img title="Grass" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/002_zpsf02c0411.png"/>';
 	 		if (badges.indexOf('bug') >= 0) glbadge = glbadge + '<img title="Bug" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/061_zps01c1d2a3.png"/>';
 	 		if (badges.indexOf('psychic') >= 0) glbadge = glbadge + '<img title="Psychic" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/091_zpsc55ac97a.png"/>';
@@ -744,8 +744,8 @@ var commands = exports.commands = {
 	 		if (badges.indexOf('water') >= 0) glbadge = glbadge + '<img title="Water" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps41b18534.png"/>';
 	 		if (badges.indexOf('ghost') >= 0) glbadge = glbadge + '<img title="Ghost" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/094_zps992c377f.png"/>';
 	 		if (badges.indexOf('flying') >= 0) glbadge = glbadge + '<img title="Flying" src="http://i.picresize.com/images/2014/03/16/7gG9.png"/>';
-	 		if (badges.indexOf('ground') >= 0) glbadge = glbadge + '<img title="Ground" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/003_zps7b109aa5.png"/>';
-	 		if (badges.indexOf('fighting') >= 0) glbadge = glbadge + '<img title="Fighting" src="http://rs1305.pbsrc.com/albums/s542/TheBattleTowerPS/146_zps098d23fa.png"/>';
+	 		if (badges.indexOf('ground') >= 0) glbadge = glbadge + '<img title="Ground" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/003_zps7b109aa5.png"/>';
+	 		if (badges.indexOf('fighting') >= 0) glbadge = glbadge + '<img title="Fighting" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/146_zps098d23fa.png"/>';
 	 		if (badges.indexOf('poison') >= 0) glbadge = glbadge + '<img title="Poison" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/018_zps7add8bf3.png"/>';
 	 		if (badges.indexOf('kozman') >= 0) e4badge = e4badge + '<img title="Elite Four Kozman (Fighting)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/145_zps5de2fc9e.png"/>';
 	 		if (badges.indexOf('solor') >= 0) e4badge = e4badge + '<img title="Elite Four Solor (Flying)" src="http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/148_zpsc03fd480.png"/>';
