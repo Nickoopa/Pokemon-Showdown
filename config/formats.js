@@ -108,15 +108,7 @@ exports.Formats = [
 		section: "XY Singles",
 
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite']
-	},
-	{
-		name: "OU (suspect test)",
-		section: "XY Singles",
-
-		challengeShow: false,
-		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite']
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Swagger']
 	},
 	{
 		name: "Ubers",
@@ -130,22 +122,15 @@ exports.Formats = [
 		name: "UU",
 		section: "XY Singles",
 
-		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Uber', 'OU', 'BL',
-			// Banned items
-			'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Heracronite', 'Medichamite', 'Gardevoirite',
-			// Banned moves
-			'Swagger',
-			// Banned abilities
-			'Drizzle', 'Drought'
-		]
+		ruleset: ['OU'],
+		banlist: ['OU', 'BL', 'Heracronite', 'Medichamite', 'Gardevoirite', 'Drizzle', 'Drought']
 	},
 	{
 		name: "RU (beta)",
 		section: "XY Singles",
 
-		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'UU'],
-		banlist: ['Uber', 'OU', 'BL', 'UU', 'BL2']
+		ruleset: ['UU'],
+		banlist: ['UU', 'BL2']
 	},
 	{
 		name: "OU Monotype",
@@ -380,7 +365,7 @@ exports.Formats = [
 			"Arceus", "Arceus-Bug", "Arceus-Dark", "Arceus-Dragon", "Arceus-Electric", "Arceus-Fairy", "Arceus-Fighting", "Arceus-Fire",
 			"Arceus-Flying", "Arceus-Ghost", "Arceus-Grass", "Arceus-Ground", "Arceus-Ice", "Arceus-Poison", "Arceus-Psychic", "Arceus-Rock", "Arceus-Steel",
 			"Arceus-Water", "Darkrai", "Deoxys", "Deoxys-Attack", "Dialga", "Giratina", "Giratina-Origin"," Groudon", "Ho-Oh", "Kyurem-White", "Lugia",
-			"Mewtwo", "Mewtwo-Mega-X", "Mewtwo-Mega-Y", "Palkia", "Rayquaza", "Reshiram", "Xerneas", "Zekrom", "Regigias", "Slaking", "Ampharosite", "Gyaradosite",
+			"Mewtwo", "Mewtwo-Mega-X", "Mewtwo-Mega-Y", "Palkia", "Rayquaza", "Reshiram", "Xerneas", "Zekrom", "Regigigas", "Slaking", "Ampharosite", "Gyaradosite",
 			"Meloetta"
 		]
 	},
@@ -424,7 +409,7 @@ exports.Formats = [
 		name: "Balanced Hackmons",
 		section: "Other Metagames",
 
-		ruleset: ['Pokemon', 'OHKO Clause', 'HP Percentage Mod'],
+		ruleset: ['Pokemon', 'OHKO Clause', 'HP Percentage Mod', 'Ability Clause'],
 		banlist: ['Wonder Guard', 'Shadow Tag', 'Arena Trap', 'Pure Power', 'Huge Power', 'Parental Bond']
 	},
 	{

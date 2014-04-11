@@ -1677,7 +1677,7 @@ exports.BattleAbilities = {
 		name: "Mummy",
 		onAfterDamage: function(damage, target, source, move) {
 			if (source && source !== target && move && move.isContact) {
-				if (source.setAbility('mummy')) {
+				if (source.setAbility('mummy', source, 'mummy', true)) {
 					this.add('-ability', source, 'Mummy', '[from] Mummy');
 				}
 			}
@@ -2001,7 +2001,7 @@ exports.BattleAbilities = {
 		desc: "Right before this Pokemon uses a move, it changes its type to match that move. Hidden Power is interpreted as its Hidden Power type, rather than Normal.",
 		shortDesc: "Right before this Pokemon uses a move, it changes its type to match that move.",
 		onBeforeMove: function(pokemon, target, move) {
-			if (!move) return;
+			if (!move || pokemon.volatiles.mustrecharge) return;
 			var moveType = (move.id === 'hiddenpower' ? pokemon.hpType : move.type);
 			if (pokemon.getTypes().join() !== moveType) {
 				if (!pokemon.setType(moveType)) return false;
