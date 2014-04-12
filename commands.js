@@ -1950,7 +1950,7 @@ var commands = exports.commands = {
 			user.pidove = true;
 			return connection.sendTo(target,'|noinit|joinfailed|WARNING: Adult content may be found in this room, join at your own risk.');
 		}
-		if (targetRoom.id === "spamroom" && !user.can('declare')) {
+		if (targetRoom.id === "spamroom" && !user.isStaff) {
 			return connection.sendTo(target, "|noinit|joinfailed|You cannot join this room.");
 		}
 	},
