@@ -705,10 +705,10 @@ var commands = exports.commands = {
 	 	if (!this.canBroadcast()) return;
 	 	if (!target) { 
 	 		userid = user.userid;
-	 		username = user.name;
+	 		username = escapeHTML(user.name);
 	 	} else {
 	 		userid = toId(target);
-	 		username = target;
+	 		username = escapeHTML(target);
 	 	}
 	 	self = this;
 	 	fs.readFile('config/badges.txt','utf8',function(err, data) {
