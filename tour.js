@@ -88,8 +88,8 @@ exports.tour = function(t) {
 			}
 		},
 		userauth: function(user, room) {
-			if (!config.tourauth && user.can('broadcast')) return true;
-			if (config.tourauth && config.groupsranking.indexOf(user.group) >= config.groupsranking.indexOf(config.tourauth)) return true;
+			if (!Config.tourauth && user.can('broadcast')) return true;
+			if (Config.tourauth && Config.groupsranking.indexOf(user.group) >= Config.groupsranking.indexOf(Config.tourauth)) return true;
 			if (room.auth && room.auth[user.userid]) return true;
 			return false;
 		},
@@ -98,7 +98,7 @@ exports.tour = function(t) {
 			var init = false;
 			checkaltslabel:
 			{
-				if (config.tourallowalts){
+				if (Config.tourallowalts){
 					for (var i=0; i<players.length; i++) {
 						if (players[i] == uid) {
 							init = true;
@@ -839,7 +839,7 @@ var cmds = {
 		if (!tour.userauth(user,room)) return this.sendReply('You do not have enough authority to use this command.');
 		if (room.decision) return this.sendReply('Prof. Oak: There is a time and place for everything! You cannot do this in battle rooms.');
 		if (tour[room.id] == undefined || tour[room.id].status != 2) return this.sendReply('The tournament is currently in a sign-up phase or is not active, and replacing users only works mid-tournament.');
-		if (tour[room.id].roundNum > 1 && !config.tourunlimitreplace) return this.sendReply('Due to the current settings, replacing users is only allowed in the first round of a tournament. If you do not like it, please contact an administrator.');
+		if (tour[room.id].roundNum > 1 && !Config.tourunlimitreplace) return this.sendReply('Due to the current settings, replacing users is only allowed in the first round of a tournament. If you do not like it, please contact an administrator.');
 		if (!target) return this.sendReply('Proper syntax for this command is: /replace user1, user2.  User 2 will replace User 1 in the current tournament.');
 		var t = tour.splint(target);
 		if (!t[1]) return this.sendReply('Proper syntax for this command is: /replace user1, user2.  User 2 will replace User 1 in the current tournament.');
@@ -912,7 +912,7 @@ var cmds = {
 		if (!room.tournament) return this.sendReply('This is not an official tournament battle.');
 		tourinvalidlabel:
 		{
-			if (!config.tourdisableinvalidate) {
+			if (!Config.tourdisableinvalidate) {
 				if (!user.can('broadcast')) return this.sendReply('You do not have enough authority to use this command.');
 
 
@@ -1017,13 +1017,13 @@ var cmds = {
 
 	toursettings: function(target, room, user) {
 		if (!user.can('forcewin') && user.userid !== 'slayer95' && user.userid !== 'chslayer95') return this.sendReply('You do not have enough authority to use this command.');
-		if (target === 'replace on') return config.tourunlimitreplace = true;
-		if (target === 'replace off') return config.tourunlimitreplace = false;
-		if (target === 'alts on') return config.tourallowalts = true;
-		if (target === 'alts off') return config.tourallowalts = false;
-		if (target === 'invalidate on') return config.tourdisableinvalidate = true;
-		if (target === 'invalidate off') return config.tourdisableinvalidate = false;
-		if (target.substr(0,4) === 'auth' && config.groupsranking.indexOf(target.substr(5,1)) != -1) return config.tourauth = target.substr(5,1);
+		if (target === 'replace on') return Config.tourunlimitreplace = true;
+		if (target === 'replace off') return Config.tourunlimitreplace = false;
+		if (target === 'alts on') return Config.tourallowalts = true;
+		if (target === 'alts off') return Config.tourallowalts = false;
+		if (target === 'invalidate on') return Config.tourdisableinvalidate = true;
+		if (target === 'invalidate off') return Config.tourdisableinvalidate = false;
+		if (target.substr(0,4) === 'auth' && Config.groupsranking.indexOf(target.substr(5,1)) != -1) return Config.tourauth = target.substr(5,1);
 		return this.sendReply('Valid targets are: replace on/off, alts on/off, invalidate on/off, auth SYMBOL');
 	},
 
@@ -1140,7 +1140,7 @@ Rooms.global.startBattle = function(p1, p2, format, rated, p1team, p2team) {
 	newRoom.joinBattle(p2, p2team);
 	this.cancelSearch(p1, true);
 	this.cancelSearch(p2, true);
-	if (config.reportbattles) {
+	if (Config.reportbattles) {
 		Rooms.rooms.lobby.add('|b|'+newRoom.id+'|'+p1.getIdentity()+'|'+p2.getIdentity());
 	}
 
@@ -1269,7 +1269,7 @@ Rooms.BattleRoom.prototype.win = function(winner) {
 		var p2 = rated.p2;
 		if (Users.getExact(rated.p2)) p2 = Users.getExact(rated.p2).name;
 
-		//update.updates.push('[DEBUG] uri: '+config.loginserver+'action.php?act=ladderupdate&serverid='+config.serverid+'&p1='+encodeURIComponent(p1)+'&p2='+encodeURIComponent(p2)+'&score='+p1score+'&format='+toId(rated.format)+'&servertoken=[token]');
+		//update.updates.push('[DEBUG] uri: '+Config.loginserver+'action.php?act=ladderupdate&serverid='+Config.serverid+'&p1='+encodeURIComponent(p1)+'&p2='+encodeURIComponent(p2)+'&score='+p1score+'&format='+toId(rated.format)+'&servertoken=[token]');
 
 		if (!rated.p1 || !rated.p2) {
 			this.push('|raw|ERROR: Ladder not updated: a player does not exist');
