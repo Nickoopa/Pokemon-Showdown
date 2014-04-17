@@ -605,7 +605,7 @@ var commands = exports.commands = {
 	 	type = targetSplit[1];
 	 	type = type.trim();
 	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,marlon';
-	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.'); 
+	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.');
 	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
 	 	self = this;
 		fs.readFile('config/badges.txt','utf8',function(err, data) {
@@ -656,7 +656,7 @@ var commands = exports.commands = {
 	 	type = targetSplit[1];
 	 	type = type.trim();
 	 	typechart = 'bug,dark,dragon,electric,fairy,fighting,fire,flying,ghost,grass,ground,ice,normal,poison,psychic,rock,steel,water,kozman,solor,zukushiku,marlon';
-	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.'); 
+	 	if (typechart.indexOf(type.toLowerCase()) < 0) return this.sendReply('Invalid type. Please use one of the following types: '+typechart+'.');
 	 	if (!targetUser) return this.sendReply('User '+targetSplit[0]+' not found.');
 	 	self = this;
 		fs.readFile('config/badges.txt','utf8',function(err, data) {
@@ -692,7 +692,7 @@ var commands = exports.commands = {
 					if (err) return console.log(err);
 					self.sendReply(targetUser.name+' has lost their '+type+' badge.');
 				});
-			} 
+			}
 		});
 	 },
 
@@ -701,9 +701,9 @@ var commands = exports.commands = {
 	 showbadge: 'viewbadges',
 	 viewbadge: 'viewbadges',
 	 vb: 'viewbadges',
-	 viewbadges: function(target, room, user) { 
+	 viewbadges: function(target, room, user) {
 	 	if (!this.canBroadcast()) return;
-	 	if (!target) { 
+	 	if (!target) {
 	 		userid = user.userid;
 	 		username = user.name;
 	 	} else {
@@ -712,7 +712,7 @@ var commands = exports.commands = {
 	 	}
 	 	self = this;
 	 	fs.readFile('config/badges.txt','utf8',function(err, data) {
-	 		if (err) { 
+	 		if (err) {
 	 			self.sendReplyBox(username+' has no badges.');
 	 			room.update();
 	 			return true;
@@ -761,7 +761,7 @@ var commands = exports.commands = {
 	tierpick: function(target, room, user){
 		return this.parse('/poll Vote for the next Tournament Tier,randombattle,ou,ubers,uu,ru,nu,lc,cap,cc1v1,oumonotype,alphabetcup,uumono,1v1,smogondoubles,vgcdoubles');
 	},
-	
+
 	forum: 'forums',
 	forums: function(target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -804,7 +804,7 @@ var commands = exports.commands = {
                         '<center>Everyone has an inner Amethyst... You just need to unlock it.<br />' +
                         '<center><img src="http://www.smogon.com/download/sprites/bwmini/620.gif">');
         },
- 
+
         saira: function (target, room, user) {
                  if (!this.canBroadcast()) return;
                  this.sendReplyBox('<center>Trainer: <font color="#986C1B"><b>saira</b></font><br />' +
@@ -813,7 +813,7 @@ var commands = exports.commands = {
                            '<center>Signature Pokemon: <font color="#C11FA9"><b>Mew</b></font><br />' +
                            '<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif">');
         },
- 
+
         ross: 'zuku',
         zuku: function (target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -823,7 +823,7 @@ var commands = exports.commands = {
                    '<center>I\'ll swallow swords spit up my pride, I follow through again this time. I\'ll be just fine...<br />' +
                    '<center><img src="http://www.smogon.com/download/sprites/bwmini/494.gif">');
         },
- 
+
         nord: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox ('<center>Trainer: <font color="#1A5370"><b>Nord</b></font><br />' +
@@ -832,7 +832,7 @@ var commands = exports.commands = {
                    '<center>Fabuuuuuuuuuuuloussssssssssssssss<br />' +
                    '<center><img src="http://www.smogon.com/download/sprites/bwmini/378.gif">');
         },
- 
+
         mizud: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#C11FA9"><b>Mizu :D</b></font><br />' +
@@ -840,7 +840,7 @@ var commands = exports.commands = {
                   '<center>/me glomps jd<br />' +
                   '<center><img src="http://www.smogon.com/download/sprites/bwmini/468.gif">');
         },
- 
+
         miner: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox ('<center>Trainer:<font color="#750292"><b>Miner0</b></font><br />' +
@@ -849,7 +849,7 @@ var commands = exports.commands = {
                     '<center>It doesn\'t matter on the types in the begining, only the outcome does.<br />' +
                     '<center><img src="http://www.smogon.com/download/sprites/bwmini/555.gif">');
         },
- 
+
         aikenka: 'aik',
         aik: function(target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -858,7 +858,7 @@ var commands = exports.commands = {
                                                 '<center>My mom is my inspiration<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/149.gif">');
         },
- 
+
         boss: function(target, room, user) {
                 if(!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#62DD03"><b>Boss</b></font><br />' +
@@ -867,7 +867,7 @@ var commands = exports.commands = {
                                                 '<center>The one who is prepared is the one who wins.<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/230.gif">');
         },
- 
+
         malk: function(target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#B7C21E"><b>Malk</b></font><br />' +
@@ -875,7 +875,7 @@ var commands = exports.commands = {
                                                 '<center>idk about catchphrase though<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/523.gif">');
         },
- 
+
         mater: function(target, room, user) {
                 if(!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#289F75"><b>Mater9000</b></font><br />' +
@@ -883,7 +883,7 @@ var commands = exports.commands = {
                                                 '<center>linooooooooooone<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/264.gif">');
         },
- 
+
         finny: 'god',
         god: function (target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -893,9 +893,9 @@ var commands = exports.commands = {
                                                 '<center><a href="http://www.youtube.com/watch?v=j-kx5YHcLdY">Battle Theme</a><br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/310.gif">');
         },
-                                               
-                                               
- 
+
+
+
         skymin: 'sky',
         sky: function (target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -905,7 +905,7 @@ var commands = exports.commands = {
                                                 '<center><a href="https://www.listenonrepeat.com/watch/?v=e9ZEd5pI-Vk">Battle Theme</a><br />' +
                                                 '<center><a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="http://www.smogon.com/download/sprites/bwmini/492-s.gif"></a>');
         },
- 
+
         cheese:'platty',
         platty: function(target, room, user) {
                 if(!this.canBroadcast()) return;
@@ -915,7 +915,7 @@ var commands = exports.commands = {
                                                 '<center>wait so i can put anything i want here?<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/270.gif">');
         },
- 
+
         miloticnob:'nob',
         nob: function(target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -926,7 +926,7 @@ var commands = exports.commands = {
                                                 '<center><a href=" https://www.youtube.com/watch?v=xf-QTw615b4&feature=youtu.be&t=38s">Battle Theme</a><br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/441.gif">');
         },
- 
+
         kenchi: function(target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer:<font color="#064579"><b>Kenchi</b></font><br />' +
@@ -935,7 +935,7 @@ var commands = exports.commands = {
                                         '<center>kek<br />' +
                                         '<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
         },
- 
+
         kuno: function(target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#666C19"><b>Kunoichi</b></font><br />' +
@@ -944,7 +944,7 @@ var commands = exports.commands = {
                                   '<center>Weaklies are stronger than Strongies obv<br />' +
                                   '<center><img src="http://www.serebii.net/pokedex-xy/icon/700.png">');
         },
- 
+
         brook: function(target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer:<font color="#7EC60C"><b>brooksyy</b></font><br />' +
@@ -953,7 +953,7 @@ var commands = exports.commands = {
                                                 '<center>Most beautiful award winner 2014<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/646-b.gif">');
         },
- 
+
         higglybiggly: 'hb',
         hb: function(target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -963,7 +963,7 @@ var commands = exports.commands = {
                                   '<center>when the going gets tough the tough get going<br />' +
                                   '<center><img src="http://www.smogon.com/download/sprites/bwmini/625.gif">');
         },
- 
+
         coolasian: 'ca',
         ca: function(target, room, user) {
                 if(!this.canBroadcast()) return;
@@ -974,7 +974,7 @@ var commands = exports.commands = {
                                                 '<center><a href="http://www.youtube.com/watch?v=1-0xgKGlMTg&feature=youtu.be">Battle Theme</a><br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/94.gif">');
         },
- 
+
         pierce: function(target, room, user) {
                 if(!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer:<font color="#C51BC0"><b>GymLe@derTouchMe</b></font><br />' +
@@ -983,7 +983,7 @@ var commands = exports.commands = {
                                                  '<center>YOU AINT GOT NO PANCAKE MIX!<br />' +
                                                  '<center><img src="http://www.smogon.com/download/sprites/bwmini/129.gif">');
         },
- 
+
         umbreon: function(target, room, user) {
                 if(!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer:<font color="#0DD3A5"><b>TrainerUmbreon</b></font><br />' +
@@ -991,7 +991,7 @@ var commands = exports.commands = {
                                                 '<center>Roar :)<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/197.gif">');
         },
- 
+
         smelly: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox ('<center>Trainer:<font color="#2f651A"><b>mrSmellyfeet100</b></font><br />' +
@@ -999,7 +999,7 @@ var commands = exports.commands = {
                                                 '<center>smell ya later!<br />' +
                                                 '<center><img src="http://www.serebii.net/pokedex-xy/icon/306.png">');
         },
- 
+
         darkgirafarig: 'dg',
         dg: function(target, room, user) {
                 if(!this.canBroadcast()) return;
@@ -1009,9 +1009,9 @@ var commands = exports.commands = {
                                                 '<center>How it all began... and how I\'ll begin again.<br />' +
                                                 '<center><a href="http://www.youtube.com/watch?v=LQ488QrqGE4">Battle Theme</a><br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif">');
- 
+
         },
- 
+
         sam: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#089D06"><b>Sam</b></font><br />' +
@@ -1020,7 +1020,7 @@ var commands = exports.commands = {
                                                 '<center>A Thousand Die as a Million are born<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
         },
- 
+
         ewok: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#928216"><b>Ewok</b></font><br />' +
@@ -1029,7 +1029,7 @@ var commands = exports.commands = {
                                                 '<center>Its better to burn out then fade away<br />' +
                                                 '<center><img src="http://www.serebii.net/pokedex-xy/icon/229.png">');
         },
- 
+
         turtlelord: 'tl',
         tl: function (target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -1040,13 +1040,13 @@ var commands = exports.commands = {
                                                 '<center><a href=" https://www.youtube.com/watch?v=xRQnJyP77tY&feature=kp">Battle Theme</a><br />' +
                                                 '<center><a href="https://www.youtube.com/watch?v=bojx9BDpJks"><img src="http://www.smogon.com/download/sprites/bwmini/389.gif"></a>');
         },
- 
+
         hope: 'vanitas',
         vanitas: function(target, room, user) {
                         if(!this.canBroadcast()) return;
                         this.sendReplyBox('<center><img src="http://i.imgur.com/EYkBb4N.jpg" width="96" height="96"><img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70"><img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96"><br><font color=#00BFFF> Ace: Talonflame </font><br> Show me anger <center><a href=" http://www.youtube.com/watch?v=pNq-8IBerXQ">Battle Theme</a><br />');
         },
- 
+
         clam: 'hc',
         bugmaster: 'hc',
         hc: function(target, room, user) {
@@ -1057,7 +1057,7 @@ var commands = exports.commands = {
                                                 '<center>Get rekt Skrubb<br />' +
                                                 '<center><img src="http://www.serebii.net/pokedex-xy/icon/675.png">');
         },
- 
+
         bay: 'badsteel',
         badsteel: function (target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -1068,7 +1068,7 @@ var commands = exports.commands = {
                                                 '<center><a href="https://www.youtube.com/watch?v=ChWK9RcG1gY">Battle Theme</a><br />' +
                                                 '<center><img src="http://play.pokemonshowdown.com/sprites/xyani/tauros.gif" width="45px" height="45px">');
         },
- 
+
         nubdove: 'pidove',
         pidove: function (target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -1078,7 +1078,7 @@ var commands = exports.commands = {
                                                 '<center>:get greninja\'d<br />' +
                                                 '<center><img src="http://www.serebii.net/pokedex-xy/icon/658.png">');
         },
- 
+
         solor: function(target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#15A20B"><b>Solor</b></font><br />' +
@@ -1087,7 +1087,7 @@ var commands = exports.commands = {
                                                 '<center>haters gonna hate and twerkers gonna twerk<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/130.gif">');
         },
- 
+
         qseasons: 'seasons',
         seasons: function(target, room, user) {
                 if (!this.canBroadcast()) return;
@@ -1096,8 +1096,8 @@ var commands = exports.commands = {
                                 'He even gets his own shiny badge: <img src = "http://i1305.photobucket.com/albums/s542/TheBattleTowerPS/153_zpsa3af73f7.png"><br>' +
                                 ':D');
         },
- 
- 
+
+
         cc: 'crazyclown94',
         crazyclown: 'crazyclown94',
         crazyclown94: function(target, room, user) {
@@ -1109,7 +1109,7 @@ var commands = exports.commands = {
                                                          '<center>Puppies eat waffles for breakfast<br />' +
                                                          '<center><a href="http://www.youtube.com/watch?v=Iyv905Q2omU"><img src="http://www.smogon.com/download/sprites/bwmini/308.gif"></a>');
         },
- 
+
         energ: 'energ218',
         lexielover:'energ218',
         energ218: function(target, room, user) {
@@ -1120,7 +1120,7 @@ var commands = exports.commands = {
                                                 '<center>kk<br />' +
                                                 '<center><a href="https://www.youtube.com/watch?v=AqPpqALiMMQ"><img src="http://www.smogon.com/download/sprites/bwmini/418.gif"></a>');
         },
- 
+
         zact94: 'zac',
         zac: function(target, room, user) {
                 if(!this.canBroadcast()) return;
@@ -1130,7 +1130,7 @@ var commands = exports.commands = {
                                                 '<center>Damn it my cat won\'t stop walking on my keyboard!<br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/563.gif">');
         },
- 
+
         batman: 'aortega',
         ao: 'aortega',
         piiiikalover: 'aortega',
@@ -1143,7 +1143,7 @@ var commands = exports.commands = {
                                           '<center>252+ SpA Machamp Focus Blast vs. 4 HP / 0 SpD Piiiikachuuu: 238-282 (112.2 - 133%) -- guaranteed OHKO<br />' +
                                           '<center><img src="http://www.smogon.com/download/sprites/bwmini/25.gif">');
         },
-        
+
 	league: 'leagueintro',
 	leagueintro: function(target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -1648,11 +1648,11 @@ var commands = exports.commands = {
 			return user.sendTo('lobby', '|popup|You cannot invite people there.');
 		}
 
-		if (config.pmmodchat) {
+		if (Config.pmmodchat) {
 			var userGroup = user.group;
-			if (config.groupsranking.indexOf(userGroup) < config.groupsranking.indexOf(config.pmmodchat)) {
-				var groupName = config.groups[config.pmmodchat].name;
-				if (!groupName) groupName = config.pmmodchat;
+			if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(Config.pmmodchat)) {
+				var groupName = Config.groups[Config.pmmodchat].name;
+				if (!groupName) groupName = Config.pmmodchat;
 				this.popupReply('Because moderated chat is set, you must be of rank ' + groupName +' or higher to PM users.');
 				return false;
 			}
@@ -1766,6 +1766,25 @@ var commands = exports.commands = {
 		}
 	},
 
+	modjoin: function(target, room, user) {
+		if (!this.can('privateroom', null, room)) return;
+		if (target === 'off') {
+			delete room.modjoin;
+			this.addModCommand(user.name+' turned off modjoin.');
+			if (room.chatRoomData) {
+				delete room.chatRoomData.modjoin;
+				Rooms.global.writeChatRoomData();
+			}
+		} else {
+			room.modjoin = true;
+			this.addModCommand(user.name+' turned on modjoin.');
+			if (room.chatRoomData) {
+				room.chatRoomData.modjoin = true;
+				Rooms.global.writeChatRoomData();
+			}
+		}
+	},
+
 	officialchatroom: 'officialroom',
 	officialroom: function(target, room, user) {
 		if (!this.can('makeroom')) return;
@@ -1864,8 +1883,8 @@ var commands = exports.commands = {
 		var name = targetUser ? targetUser.name : this.targetUsername;
 
 		if (!userid) {
-			if (target && config.groups[target]) {
-				var groupid = config.groups[target].id;
+			if (target && Config.groups[target]) {
+				var groupid = Config.groups[target].id;
 				return this.sendReply("/room"+groupid+" [username] - Promote a user to "+groupid+" in this room only");
 			}
 			return this.parse("/help roompromote");
@@ -1876,28 +1895,28 @@ var commands = exports.commands = {
 		}
 
 		var nextGroup = target || Users.getNextGroupSymbol(currentGroup, cmd === 'roomdemote', true);
-		if (target === 'deauth') nextGroup = config.groupsranking[0];
-		if (!config.groups[nextGroup]) {
+		if (target === 'deauth') nextGroup = Config.groupsranking[0];
+		if (!Config.groups[nextGroup]) {
 			return this.sendReply('Group \'' + nextGroup + '\' does not exist.');
 		}
-		if (config.groups[nextGroup].globalonly) {
-			return this.sendReply('Group \'room' + config.groups[nextGroup].id + '\' does not exist as a room rank.');
+		if (Config.groups[nextGroup].globalonly) {
+			return this.sendReply('Group \'room' + Config.groups[nextGroup].id + '\' does not exist as a room rank.');
 		}
-		if (currentGroup !== ' ' && !user.can('room'+config.groups[currentGroup].id, null, room)) {
-			return this.sendReply('/' + cmd + ' - Access denied for promoting from '+config.groups[currentGroup].name+'.');
+		if (currentGroup !== ' ' && !user.can('room'+Config.groups[currentGroup].id, null, room)) {
+			return this.sendReply('/' + cmd + ' - Access denied for promoting from '+Config.groups[currentGroup].name+'.');
 		}
-		if (nextGroup !== ' ' && !user.can('room'+config.groups[nextGroup].id, null, room)) {
-			return this.sendReply('/' + cmd + ' - Access denied for promoting to '+config.groups[nextGroup].name+'.');
+		if (nextGroup !== ' ' && !user.can('room'+Config.groups[nextGroup].id, null, room)) {
+			return this.sendReply('/' + cmd + ' - Access denied for promoting to '+Config.groups[nextGroup].name+'.');
 		}
 		if (currentGroup === nextGroup) {
-			return this.sendReply("User '"+this.targetUsername+"' is already a "+(config.groups[nextGroup].name || 'regular user')+" in this room.");
+			return this.sendReply("User '"+this.targetUsername+"' is already a "+(Config.groups[nextGroup].name || 'regular user')+" in this room.");
 		}
-		if (config.groups[nextGroup].globalonly) {
-			return this.sendReply("The rank of "+config.groups[nextGroup].name+" is global-only and can't be room-promoted to.");
+		if (Config.groups[nextGroup].globalonly) {
+			return this.sendReply("The rank of "+Config.groups[nextGroup].name+" is global-only and can't be room-promoted to.");
 		}
 
-		var isDemotion = (config.groups[nextGroup].rank < config.groups[currentGroup].rank);
-		var groupName = (config.groups[nextGroup].name || nextGroup || '').trim() || 'a regular user';
+		var isDemotion = (Config.groups[nextGroup].rank < Config.groups[currentGroup].rank);
+		var groupName = (Config.groups[nextGroup].name || nextGroup || '').trim() || 'a regular user';
 
 		if (nextGroup === ' ') {
 			delete room.auth[userid];
@@ -1932,8 +1951,19 @@ var commands = exports.commands = {
 			if (target === 'lobby') return connection.sendTo(target, "|noinit|nonexistent|");
 			return connection.sendTo(target, "|noinit|nonexistent|The room '"+target+"' does not exist.");
 		}
-		if (targetRoom.isPrivate && !user.named) {
-			return connection.sendTo(target, "|noinit|namerequired|You must have a name in order to join the room '"+target+"'.");
+		if (targetRoom.isPrivate) {
+			if (targetRoom.modjoin) {
+				var userGroup = user.group;
+				if (targetRoom.auth) {
+					userGroup = targetRoom.auth[user.userid] || ' ';
+				}
+				if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(targetRoom.modchat)) {
+					return connection.sendTo(target, "|noinit|nonexistent|The room '"+target+"' does not exist.");
+				}
+			}
+			if (!user.named) {
+				return connection.sendTo(target, "|noinit|namerequired|You must have a name in order to join the room '"+target+"'.");
+			}
 		}
 		if (!user.joinRoom(targetRoom || room, connection)) {
 			return connection.sendTo(target, "|noinit|joinfailed|The room '"+target+"' could not be joined.");
@@ -2350,7 +2380,7 @@ var commands = exports.commands = {
 			return this.privateModCommand('('+targetUser.name+' would be banned by '+user.name+problem+'.)');
 		}
 
-		targetUser.popup(user.name+" has banned you." + (config.appealurl ? ("  If you feel that your banning was unjustified you can appeal the ban:\n" + config.appealurl) : "") + "\n\n"+target);
+		targetUser.popup(user.name+" has banned you." + (Config.appealurl ? ("  If you feel that your banning was unjustified you can appeal the ban:\n" + Config.appealurl) : "") + "\n\n"+target);
 		if (cmd === 'bh') {
 			this.addModCommand(""+targetUser.name+" was hit by "+user.name+"'s Ban Hammer. " + (target ? " (" + target + ")" : ""), ' ('+targetUser.latestIp+')');
 		}else{
@@ -2485,8 +2515,8 @@ var commands = exports.commands = {
 		var name = targetUser ? targetUser.name : this.targetUsername;
 
 		if (!userid) {
-			if (target && config.groups[target]) {
-				var groupid = config.groups[target].id;
+			if (target && Config.groups[target]) {
+				var groupid = Config.groups[target].id;
 				return this.sendReply("/"+groupid+" [username] - Promote a user to "+groupid+" globally");
 			}
 			return this.parse("/help promote");
@@ -2500,22 +2530,22 @@ var commands = exports.commands = {
 		}
 
 		var nextGroup = target ? target : Users.getNextGroupSymbol(currentGroup, cmd === 'demote', true);
-		if (target === 'deauth') nextGroup = config.groupsranking[0];
-		if (!config.groups[nextGroup]) {
+		if (target === 'deauth') nextGroup = Config.groupsranking[0];
+		if (!Config.groups[nextGroup]) {
 			return this.sendReply('Group \'' + nextGroup + '\' does not exist.');
 		}
-		if (config.groups[nextGroup].roomonly) {
-			return this.sendReply('Group \'' + config.groups[nextGroup].id + '\' does not exist as a global rank.');
+		if (Config.groups[nextGroup].roomonly) {
+			return this.sendReply('Group \'' + Config.groups[nextGroup].id + '\' does not exist as a global rank.');
 		}
 		if (!user.canPromote(currentGroup, nextGroup)) {
 			return this.sendReply('/' + cmd + ' - Access denied.');
 		}
 
-		var isDemotion = (config.groups[nextGroup].rank < config.groups[currentGroup].rank);
+		var isDemotion = (Config.groups[nextGroup].rank < Config.groups[currentGroup].rank);
 		if (!Users.setOfflineGroup(name, nextGroup)) {
 			return this.sendReply('/promote - WARNING: This user is offline and could be unregistered. Use /forcepromote if you\'re sure you want to risk it.');
 		}
-		var groupName = (config.groups[nextGroup].name || nextGroup || '').trim() || 'a regular user';
+		var groupName = (Config.groups[nextGroup].name || nextGroup || '').trim() || 'a regular user';
 		if (isDemotion) {
 			this.privateModCommand('('+name+' was demoted to ' + groupName + ' by '+user.name+'.)');
 			if (targetUser) {
@@ -2539,7 +2569,7 @@ var commands = exports.commands = {
 		if (!Users.setOfflineGroup(name, nextGroup, true)) {
 			return this.sendReply('/forcepromote - Don\'t forcepromote unless you have to.');
 		}
-		var groupName = config.groups[nextGroup].name || nextGroup || '';
+		var groupName = Config.groups[nextGroup].name || nextGroup || '';
 		this.addModCommand(''+name+' was promoted to ' + (groupName.trim()) + ' by '+user.name+'.');
 	},
 
@@ -2552,8 +2582,8 @@ var commands = exports.commands = {
 			return this.sendReply('Moderated chat is currently set to: '+room.modchat);
 		}
 		if (!this.can('modchat', null, room)) return false;
-		if (room.modchat && room.modchat.length <= 1 && config.groupsranking.indexOf(room.modchat) > 1 && !user.can('modchatall', null, room)) {
-			return this.sendReply('/modchat - Access denied for removing a setting higher than ' + config.groupsranking[1] + '.');
+		if (room.modchat && room.modchat.length <= 1 && Config.groupsranking.indexOf(room.modchat) > 1 && !user.can('modchatall', null, room)) {
+			return this.sendReply('/modchat - Access denied for removing a setting higher than ' + Config.groupsranking[1] + '.');
 		}
 
 		target = target.toLowerCase();
@@ -2579,11 +2609,11 @@ var commands = exports.commands = {
 			target = '\u2605';
 			// fallthrough
 		default:
-			if (!config.groups[target]) {
+			if (!Config.groups[target]) {
 				return this.parse('/help modchat');
 			}
-			if (config.groupsranking.indexOf(target) > 1 && !user.can('modchatall', null, room)) {
-				return this.sendReply('/modchat - Access denied for setting higher than ' + config.groupsranking[1] + '.');
+			if (Config.groupsranking.indexOf(target) > 1 && !user.can('modchatall', null, room)) {
+				return this.sendReply('/modchat - Access denied for setting higher than ' + Config.groupsranking[1] + '.');
 			}
 			room.modchat = target;
 			break;
@@ -2597,6 +2627,11 @@ var commands = exports.commands = {
 			this.add('|raw|<div class="broadcast-red"><b>Moderated chat was set to '+modchat+'!</b><br />Only users of rank '+modchat+' and higher can talk.</div>');
 		}
 		this.logModCommand(user.name+' set modchat to '+room.modchat);
+
+		if (room.chatRoomData) {
+			room.chatRoomData.modchat = room.modchat;
+			Rooms.global.writeChatRoomData();
+		}
 	},
 
 	declare: function(target, room, user) {
@@ -2957,10 +2992,10 @@ var commands = exports.commands = {
 	emergency: function(target, room, user) {
 		if (!this.can('lockdown')) return false;
 
-		if (config.emergency) {
+		if (Config.emergency) {
 			return this.sendReply("We're already in emergency mode.");
 		}
-		config.emergency = true;
+		Config.emergency = true;
 		for (var id in Rooms.rooms) {
 			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-red">The server has entered emergency mode. Some features might be disabled or limited.</div>');
 		}
@@ -2971,10 +3006,10 @@ var commands = exports.commands = {
 	endemergency: function(target, room, user) {
 		if (!this.can('lockdown')) return false;
 
-		if (!config.emergency) {
+		if (!Config.emergency) {
 			return this.sendReply("We're not in emergency mode.");
 		}
-		config.emergency = false;
+		Config.emergency = false;
 		for (var id in Rooms.rooms) {
 			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-green"><b>The server is no longer in emergency mode.</b></div>');
 		}
@@ -3135,7 +3170,7 @@ var commands = exports.commands = {
 		}
 		if (target === 'all' || target === 'config') {
 			this.sendReply('Calculating config size...');
-			var configSize = ResourceMonitor.sizeOfObject(config);
+			var configSize = ResourceMonitor.sizeOfObject(Config);
 			this.sendReply("Config is using " + configSize + " bytes of memory.");
 		}
 		if (target === 'all' || target === 'resourcemonitor' || target === 'rm') {
@@ -3365,10 +3400,10 @@ var commands = exports.commands = {
 		target = toId(target);
 		if (!this.can('autotimer')) return;
 		if (target === 'off' || target === 'false' || target === 'stop') {
-			config.forcetimer = false;
+			Config.forcetimer = false;
 			this.addModCommand("Forcetimer is now OFF: The timer is now opt-in. (set by "+user.name+")");
 		} else if (target === 'on' || target === 'true' || !target) {
-			config.forcetimer = true;
+			Config.forcetimer = true;
 			this.addModCommand("Forcetimer is now ON: All battles will be timed. (set by "+user.name+")");
 		} else {
 			this.sendReply("'"+target+"' is not a recognized forcetimer setting.");
@@ -3407,11 +3442,11 @@ var commands = exports.commands = {
 	cancelsearch: 'search',
 	search: function(target, room, user) {
 		if (target) {
-			if (config.pmmodchat) {
+			if (Config.pmmodchat) {
 				var userGroup = user.group;
-				if (config.groupsranking.indexOf(userGroup) < config.groupsranking.indexOf(config.pmmodchat)) {
-					var groupName = config.groups[config.pmmodchat].name;
-					if (!groupName) groupName = config.pmmodchat;
+				if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(Config.pmmodchat)) {
+					var groupName = Config.groups[Config.pmmodchat].name;
+					if (!groupName) groupName = Config.pmmodchat;
 					this.popupReply('Because moderated chat is set, you must be of rank ' + groupName +' or higher to search for a battle.');
 					return false;
 				}
@@ -3432,11 +3467,11 @@ var commands = exports.commands = {
 		if (targetUser.blockChallenges && !user.can('bypassblocks', targetUser)) {
 			return this.popupReply("The user '"+this.targetUsername+"' is not accepting challenges right now.");
 		}
-		if (config.pmmodchat) {
+		if (Config.pmmodchat) {
 			var userGroup = user.group;
-			if (config.groupsranking.indexOf(userGroup) < config.groupsranking.indexOf(config.pmmodchat)) {
-				var groupName = config.groups[config.pmmodchat].name;
-				if (!groupName) groupName = config.pmmodchat;
+			if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(Config.pmmodchat)) {
+				var groupName = Config.groups[Config.pmmodchat].name;
+				if (!groupName) groupName = Config.pmmodchat;
 				this.popupReply('Because moderated chat is set, you must be of rank ' + groupName +' or higher to challenge users.');
 				return false;
 			}
@@ -3494,8 +3529,8 @@ var commands = exports.commands = {
 	cmd: 'query',
 	query: function(target, room, user, connection) {
 		// Avoid guest users to use the cmd errors to ease the app-layer attacks in emergency mode
-		var trustable = (!config.emergency || (user.named && user.authenticated));
-		if (config.emergency && ResourceMonitor.countCmd(connection.ip, user.name)) return false;
+		var trustable = (!Config.emergency || (user.named && user.authenticated));
+		if (Config.emergency && ResourceMonitor.countCmd(connection.ip, user.name)) return false;
 		var spaceIndex = target.indexOf(' ');
 		var cmd = target;
 		if (spaceIndex > 0) {
